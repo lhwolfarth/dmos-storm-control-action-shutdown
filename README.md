@@ -13,9 +13,10 @@ Opções:
 Exemplo de uso (para realizar testes ou debug):
   ./dmos-storm-control-action-shutdown.sh -t -d
 
-Exemplo de uso (para aplicar o shutdown caso necessário):
+Exemplo de uso (para aplicar o shutdown se o broadcast ou multicast PPS forem maiores que o tolerado):
  ./dmos-storm-control-action-shutdown.sh
-############ EXEMPLO DE ARQUIVO DE CONFIGURAÇÃO ############
+
+###### EXEMPLO DE ARQUIVO DE CONFIGURAÇÃO #######
 #Credenciais dos switches (todos campos obrigatórios)
 ssh-user:wolf
 ssh-password:wolf
@@ -24,7 +25,7 @@ snmp-v2c-community:public
 #Periodo em segundos (s) entre as verificações (leituras SNMP)
 period:10
 
-###### INSTRUÇÕES: ######
+####### INSTRUÇÕES: ######
 #######  Os parâmentros 'anel-<id>-switch-ip', 'anel-<id>-main' e 'anel-<id>-backup' são obrigatórios.
 #######  Os parâmetros 'anel-<id>-broadcast-max-pps' , 'anel-<id>-multicast-max-pps' e 'anel-<id>-name' são opcionais.
 #######  Novos anéis podem ser acrescentados conforme necessidade respeitando a lógica do nome das variáveis conforme exemplos a seguir.
@@ -43,7 +44,7 @@ anel-2-switch-ip:172.24.17.190
 anel-2-main:ten-gigabit-ethernet-1/1/3
 anel-2-backup:ten-gigabit-ethernet-1/1/4
 anel-2-broadcast-max-pps:10000
-# anel-2-multicast-max-pps:10000 <---- comentar a linha caso não seja desejado desabilitar a verificação
+####### anel-2-multicast-max-pps:10000 <---- comentar a linha caso não seja desejado desabilitar a verificação
 
 #Anel 3 - cliente GHI
 anel-3-name:GHI
