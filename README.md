@@ -24,10 +24,10 @@ snmp-v2c-community:public
 #Periodo em segundos (s) entre as verificações (leituras SNMP)
 period:10
 
-# INSTRUÇÕES:
-#  Os parâmentros 'anel-<id>-switch-ip', 'anel-<id>-main' e 'anel-<id>-backup' são obrigatórios.
-#  Os parâmetros 'anel-<id>-broadcast-max-pps' , 'anel-<id>-multicast-max-pps' e 'anel-<id>-name' são opcionais.
-#  Novos anéis podem ser acrescentados conforme necessidade respeitando a lógica do nome das variáveis conforme exemplos a seguir.
+###### INSTRUÇÕES: ######
+#######  Os parâmentros 'anel-<id>-switch-ip', 'anel-<id>-main' e 'anel-<id>-backup' são obrigatórios.
+#######  Os parâmetros 'anel-<id>-broadcast-max-pps' , 'anel-<id>-multicast-max-pps' e 'anel-<id>-name' são opcionais.
+#######  Novos anéis podem ser acrescentados conforme necessidade respeitando a lógica do nome das variáveis conforme exemplos a seguir.
 
 #Anel 1 - cliente ABC
 anel-1-name:ABC
@@ -53,7 +53,7 @@ anel-3-backup:ten-gigabit-ethernet-1/1/6
 anel-3-broadcast-max-pps:10000
 anel-3-multicast-max-pps:10000
 
-############ LOGS E STATUS ############
+###### LOGS E STATUS #######
 É possível visualizar os logs em um arquivo .log, os status das interfaces em um arquivo CSV e/ou em uma página PHP conforme arquivos informados nas variáveis abaixo contidas no script "dmos-storm-control-action-shutdown.sh", exemplo:
 
 CONFIG_FILE="$SCRIPT_PATH/dmos-storm-control-action-shutdown.conf"
@@ -61,7 +61,7 @@ LOG_FILE="$SCRIPT_PATH/dmos-storm-control-action-shutdown.log"
 STATUS_FILE="$SCRIPT_PATH/dmos-storm-control-action-shutdown.csv"
 PHP_FILE="/var/www/html/dmos-storm-control-action-shutdown.php"
 
-############ INSTALANDO COMO UM SERVIÇO ############
+###### INSTALANDO COMO UM SERVIÇO #######
 Para instalar o script como um serviço pode-se seguir os seguintes passos:
 
 $ sudo nano /etc/systemd/system/dmos-storm-control.service
@@ -76,7 +76,7 @@ Restart=always
 RestartSec=5
 User=root
 ExecStart=/caminho/para/o/script/dmos-storm-control-action-shutdown.sh 
-## (dica de caminho: /opt/dmos-storm-control-action-shutdown/dmos-storm-control-action-shutdown.sh), o script e o arquivo de configuração dmos-storm-control-action-shutdown.conf devem estar no mesmo caminho ###
+####### (dica de caminho: /opt/dmos-storm-control-action-shutdown/dmos-storm-control-action-shutdown.sh), o script e o arquivo de configuração dmos-storm-control-action-shutdown.conf devem estar no mesmo caminho #######
 
 [Install]
 WantedBy=multi-user.target
