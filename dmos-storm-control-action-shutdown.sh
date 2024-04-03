@@ -53,7 +53,7 @@ function usage() {
   echo "Exemplo de uso (para realizar testes ou debug):"
   echo "  $0 -t -d"
   echo ""
-  echo "Exemplo de uso (para aplicar o shutdown caso necessário):"
+  echo "Exemplo de uso (para aplicar o shutdown se o broadcast ou multicast PPS forem maiores que o tolerado):"
   echo " $0"
   echo ""
   exit 1
