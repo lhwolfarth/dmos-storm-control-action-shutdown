@@ -44,7 +44,7 @@ anel-2-switch-ip:172.24.17.190
 anel-2-main:ten-gigabit-ethernet-1/1/3
 anel-2-backup:ten-gigabit-ethernet-1/1/4
 anel-2-broadcast-max-pps:10000
-####### anel-2-multicast-max-pps:10000 <---- comentar a linha caso não seja desejado desabilitar a verificação
+####### anel-2-multicast-max-pps:10000 <---- comentar a linha caso seja desejado desabilitar a verificação
 
 #Anel 3 - cliente GHI
 anel-3-name:GHI
