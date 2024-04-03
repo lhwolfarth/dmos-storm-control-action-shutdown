@@ -7,7 +7,7 @@ Uso: ./dmos-storm-control-action-shutdown.sh -h -t
 
 Opções:
   -h               Exibe ajuda
-  -t               Modo teste, o comando shutdown não será aplicado mesmo que os limiares de PPP sejam atingidos (opcional)
+  -t               Modo teste, o comando shutdown não será aplicado mesmo que os limiares de PPS sejam atingidos (opcional)
   -d               Habilita o modo debug (opcional)
 
 Exemplo de uso (para realizar testes ou debug):
