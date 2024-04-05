@@ -1,7 +1,7 @@
 # dmos-storm-control-action-shutdown
 
 Este script aplica o comando shutdown na interface Backup de um determinado anel caso o Storm de Broadcast ou Multicast ocorra no anel.
-Funcionamento: Como fator de decisão o script compara o PPS de Broadcast Input ou Multicast Input com o limitar configurado no arquivo './dmos-storm-control-action-shutdown.conf' e caso um dos valores seja violado na interface Main ou Backup a interface Backup será colocada em shutdown. As leituras são feitas por SNMPv2 e a configuração de shutdown é realizada por SSH.
+Funcionamento: Como fator de decisão o script compara o PPS de Broadcast Input ou Multicast Input com o limiar configurado no arquivo './dmos-storm-control-action-shutdown.conf' e caso um dos valores seja violado na interface Main ou Backup a interface Backup será colocada em shutdown. As leituras são feitas por SNMPv2 e a configuração de shutdown é realizada por SSH.
 
 Uso: ./dmos-storm-control-action-shutdown.sh -h -t
 
